@@ -74,14 +74,7 @@ class Wp_Circleci_Status_Admin {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style(
-		    $this->plugin_name,
-            plugin_dir_url( __FILE__ ) . 'css/dashboard-widget.css',
-            array(),
-            $this->version,
-            'all'
-        );
-
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/dashboard-widget.css', array(), $this->version, 'all' );
 	}
 
 	/**
@@ -95,25 +88,13 @@ class Wp_Circleci_Status_Admin {
 		 * Enqueues the Status Page JS library.
 		 */
 
-        wp_enqueue_script(
-            $this->plugin_name . '-lib',
-            'https://cdn.statuspage.io/se-v2.js',
-            null,
-            null,
-            true
-        );
+        wp_enqueue_script($this->plugin_name . '-lib', 'https://cdn.statuspage.io/se-v2.js', null, null, true );
 
         /**
          * Enqueues the script that fetches the status.
          */
 
-		wp_enqueue_script(
-		    $this->plugin_name,
-            plugin_dir_url( __FILE__ ) . 'js/dashboard-widget.js',
-            array( $this->plugin_name . '-lib' ),
-            $this->version,
-            true );
-
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/dashboard-widget.js', array( $this->plugin_name . '-lib' ), $this->version, true );
 	}
 
 }
