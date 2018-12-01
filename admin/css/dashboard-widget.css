@@ -1,0 +1,40 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.wp-circleci-status li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.wp-circleci-status li .status {
+    display: inline-block;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 8px;
+    text-transform: uppercase;
+    padding: 0px 4px;
+    letter-spacing: 1px;
+    margin-right: 5px;
+}
+
+.wp-circleci-status li .status.postmortem {
+    background-color: #34495e;
+}
+
+.wp-circleci-status li .status.resolved {
+    background-color: #27ae60;
+}
+
+.wp-circleci-status li .status.monitoring {
+    background-color: #e67e22;
+}
+
+.wp-circleci-status li .status.identified {
+    background-color: #9b59b6;
+}
+
+.wp-circleci-status li .status.investigating {
+    background-color: #e74c3c;
+}
