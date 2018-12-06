@@ -94,7 +94,7 @@ class Wp_Circleci_Status_Admin {
          * Enqueues the script that fetches the status.
          */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/dashboard-widget.js', array( $this->plugin_name . '-lib' ), $this->version, true );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/dashboard-widget.js', array( $this->plugin_name . '-lib' ), null, true );
 	}
 
 }

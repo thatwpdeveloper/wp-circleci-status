@@ -67,8 +67,8 @@ class Wp_Circleci_Status {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'PLUGIN_NAME_VERSION' ) ) {
-			$this->version = PLUGIN_NAME_VERSION;
+		if ( defined( 'WP_CIRCLECI_STATUS_VERSION' ) ) {
+			$this->version = WP_CIRCLECI_STATUS_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}

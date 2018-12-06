@@ -12,6 +12,21 @@
         this.incidentsHTML = '';
         this.statusSource = new StatusPage.page({page: '6w4r0ttlx5ft'});
         this.maxItems = 10;
+        this.widgetIsPresent = false;
+
+        /**
+         * Checks if the dashboard widget is on the current page.
+         * We don't want to load the script on wrong pages.
+         */
+        this.checkWidgetPresence = function () {
+
+            if( this.statusContainer.length > 0 ) {
+
+                this.widgetIsPresent = true;
+
+            }
+
+        }
 
         /**
          * Removes the 'Loading the incidents ...' label.
@@ -84,10 +99,15 @@
 
         this.display = function () {
 
-            this.emptyHTML();
+            this.checkWidgetPresence();
 
-            this.getIncidents();
+            if( this.widgetIsPresent ) {
 
+                this.emptyHTML();
+
+                this.getIncidents();
+
+            }
         }
     }
 
